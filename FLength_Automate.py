@@ -9,6 +9,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_squared_error
+from requirements import connection_sql #connection
 
 # data for train the ML model
 df = pd.read_csv('C:/Users/fauziah/Desktop/export2.csv')
@@ -31,7 +32,7 @@ import os
 import pandas as pd
 import numpy as np
 
-conn = cx_Oracle.connect('xhq/xhq2mes@akuas952.office.graphiteelectrodes.net/mes301')
+conn = connection_sql
 cur = conn.cursor()
 
 sql_st = """
